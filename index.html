@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thành viên Nhóm 3</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    :root {
+      --bg: #f0f2f5;
+      --card: #fff;
+      --accent: #1877f2;
+      --text: #050505;
+      --shadow: 0 4px 12px rgba(0,0,0,0.1);
+      --radius: 12px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+
+    body {
+      background: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      color: var(--accent);
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      padding: 20px 10px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      color: var(--text);
+    }
+
+    .card button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card:hover button {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; text-align: center; }
+      .card img { width: 90px; height: 90px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Thành viên Nhóm 3</h1>
+  <div class="container">
+    <div class="card">
+      <img src="./images/nam.jpg" alt="Bùi Tấn Nam">
+      <h2>Bùi Tấn Nam</h2>
+      <button onclick="window.open('https://tannam229.github.io/portfolio/', '_blank')">Truy cập</button>
+    </div>
+    <div class="card">
+      <img src="./images/toàn.jpg" alt="Trương Phúc Toàn">
+      <h2>Trương Phúc Toàn</h2>
+      <button onclick="window.open('https://fameney.github.io/phuctoan0105/, '_blank')">Truy cập</button>
+    </div>
+    <div class="card">
+      <img src="./images/phi.jpg" alt="Nguyễn Tấn Phi">
+      <h2>Nguyễn Tấn Phi</h2>
+      <button onclick="window.open('#', '_blank')">Truy cập</button>
+    </div>
+    <div class="card">
+      <img src="./images/oai.jpg" alt="Nguyễn Hoàng Đức Oai">
+      <h2>Nguyễn Hoàng Đức Oai</h2>
+      <button onclick="window.open('https://duccoai.github.io/portfolio/', '_blank')">Truy cập</button>
+    </div>
+  </div>
+</body>
+</html>
